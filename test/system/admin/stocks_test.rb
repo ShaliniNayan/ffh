@@ -15,10 +15,10 @@ class Admin::StocksTest < ApplicationSystemTestCase
     click_on "New stock"
 
     check "Active" if @admin_stock.active
-    fill_in "Category", with: @admin_stock.category_id
     fill_in "Description", with: @admin_stock.description
     fill_in "Name", with: @admin_stock.name
     fill_in "Price", with: @admin_stock.price
+    fill_in "Product", with: @admin_stock.product_id
     click_on "Create Stock"
 
     assert_text "Stock was successfully created"
@@ -30,10 +30,10 @@ class Admin::StocksTest < ApplicationSystemTestCase
     click_on "Edit this stock", match: :first
 
     check "Active" if @admin_stock.active
-    fill_in "Category", with: @admin_stock.category_id
     fill_in "Description", with: @admin_stock.description
     fill_in "Name", with: @admin_stock.name
     fill_in "Price", with: @admin_stock.price
+    fill_in "Product", with: @admin_stock.product_id
     click_on "Update Stock"
 
     assert_text "Stock was successfully updated"
