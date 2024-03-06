@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   namespace :admin do
+    resources :stocks
     resources :products do
       resources :stocks # Add nested resources for product stocks
     end
