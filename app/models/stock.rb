@@ -1,4 +1,3 @@
 class Stock < ApplicationRecord
-    belongs_to :category
-  end
-  
+    belongs_to :product
+end
