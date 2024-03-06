@@ -1,4 +1,4 @@
-class Admin::Stock < ApplicationRecord
+class Stock < ApplicationRecord
     belongs_to :product
 end
   
