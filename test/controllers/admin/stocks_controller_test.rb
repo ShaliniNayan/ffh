@@ -17,7 +17,7 @@ class Admin::StocksControllerTest < ActionDispatch::IntegrationTest
 
   test "should create admin_stock" do
     assert_difference("Admin::Stock.count") do
-      post admin_stocks_url, params: { admin_stock: { active: @admin_stock.active, amount: @admin_stock.amount, product_id: @admin_stock.product_id, size: @admin_stock.size } }
+      post admin_stocks_url, params: { admin_stock: { amount: @admin_stock.amount, product_id: @admin_stock.product_id, size: @admin_stock.size } }
     end
 
     assert_redirected_to admin_stock_url(Admin::Stock.last)
@@ -34,7 +34,7 @@ class Admin::StocksControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update admin_stock" do
-    patch admin_stock_url(@admin_stock), params: { admin_stock: { active: @admin_stock.active, amount: @admin_stock.amount, product_id: @admin_stock.product_id, size: @admin_stock.size } }
+    patch admin_stock_url(@admin_stock), params: { admin_stock: { amount: @admin_stock.amount, product_id: @admin_stock.product_id, size: @admin_stock.size } }
     assert_redirected_to admin_stock_url(@admin_stock)
   end
 

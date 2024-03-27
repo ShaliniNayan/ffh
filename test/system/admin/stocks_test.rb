@@ -14,7 +14,6 @@ class Admin::StocksTest < ApplicationSystemTestCase
     visit admin_stocks_url
     click_on "New stock"
 
-    check "Active" if @admin_stock.active
     fill_in "Amount", with: @admin_stock.amount
     fill_in "Product", with: @admin_stock.product_id
     fill_in "Size", with: @admin_stock.size
@@ -28,7 +27,6 @@ class Admin::StocksTest < ApplicationSystemTestCase
     visit admin_stock_url(@admin_stock)
     click_on "Edit this stock", match: :first
 
-    check "Active" if @admin_stock.active
     fill_in "Amount", with: @admin_stock.amount
     fill_in "Product", with: @admin_stock.product_id
     fill_in "Size", with: @admin_stock.size

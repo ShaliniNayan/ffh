@@ -4,10 +4,8 @@ one:
   size: MyString
   amount: 1
   product: one
-  active: false
 
 two:
   size: MyString
   amount: 1
   product: two
-  active: false

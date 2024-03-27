@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Ffh</title>
+    <title>FFH</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -12,8 +12,10 @@
   </head>
 
   <body>
-    <main class="container mx-auto mt-28 px-5 flex">
+    <%= render "shared/navbar" %>
+    <main class="container mx-auto mt-28 max-w-7xl px-2 sm:px-6 lg:px-8">
       <%= yield %>
     </main>
+    <%= render "shared/footer" %>
   </body>
 </html>
